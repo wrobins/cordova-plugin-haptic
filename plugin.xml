@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        id="cordova-plugin-haptic" version="1.0.0">
+    <name>Cordova Haptic Feedback Plugin</name>
+    <description>A Cordova plugin providing a native haptic feedback experience rather than a generic vibration.</description>
+    <author>Walter Robins</author>
+    <keywords>cordova,android,ios,haptic,vibrate,vibration,buzz,keypress</keywords>
+    <license>Apache 2.0</license>
+    <repo>https://github.com/wrobins/cordova-plugin-haptic.git</repo>
+    <issue>https://github.com/wrobins/cordova-plugin-haptic/issues</issue>
+    <engines>
+        <engine name="cordova-android" version=">=13.0.0"/>
+        <engine name="cordova-ios" version=">=6.2.0"/>
+    </engines>
+    <js-module src="www/hapticplugin.js" name="hapticPlugin">
+        <clobbers target="cordova.plugins.hapticPlugin" />
+    </js-module>
+    <platform name="android">
+        <preference name="android-minSdkVersion" value="34" />
+        <source-file src="src/android/HapticPlugin.java" target-dir="src/com/wrobins/cordova/plugin" />
+    </platform>
+    <platform name="ios">
+        <config-file target="config.xml" parent="/*">
+            <feature name="HapticPlugin">
+                <param name="ios-package" value="HapticPlugin" />
+                <param name="onload" value="true" />
+            </feature>
+        </config-file>
+        <header-file src="src/ios/HapticPlugin.h" />
+        <source-file src="src/ios/HapticPlugin.m" />
+    </platform>
+</plugin>
