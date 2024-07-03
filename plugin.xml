@@ -17,6 +17,11 @@
         <clobbers target="cordova.plugins.hapticPlugin" />
     </js-module>
     <platform name="android">
+        <config-file target="res/xml/config.xml" parent="/*">
+            <feature name="HapticPlugin">
+                <param name="android-package" value="com.wrobins.cordova.plugin.HapticPlugin" />
+            </feature>
+        </config-file>
         <source-file src="src/android/HapticPlugin.java" target-dir="src/com/wrobins/cordova/plugin" />
     </platform>
     <platform name="ios">
