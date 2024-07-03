@@ -43,7 +43,7 @@ The user has toggled a switch or button into the off position.
 The user has toggled a switch or button into the on position.
 #### "VIRTUAL_KEY"
 The user has pressed on a virtual on-screen key.
-#### "VIRTUAL_KEY_RELEASE
+#### "VIRTUAL_KEY_RELEASE"
 The user has released a virtual key.
 ## iOS
 The iOS haptic systems makes use of the [[UIFeedbackGenerator](https://developer.apple.com/documentation/uikit/animation_and_haptics)] subclasses and constants from UIKit, with the exception of UICanvasFeedbackGenerator. Some of the constants require iOS 13+ thus the plugin requirements. Note that these classes are generated on the fly when the feedback is sent in this plugin without making use of prepare() ahead of time, so keep that in mind when considering latency. Also, location-based feedback (passing location coordinates) is not supported, though I might add support in future releases.

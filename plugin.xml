@@ -10,7 +10,7 @@
     <repo>https://github.com/wrobins/cordova-plugin-haptic.git</repo>
     <issue>https://github.com/wrobins/cordova-plugin-haptic/issues</issue>
     <engines>
-        <engine name="cordova-android" version=">=13.0.0"/>
+        <engine name="cordova-android" version=">=12.0.0"/>
         <engine name="cordova-ios" version=">=6.2.0"/>
     </engines>
     <js-module src="www/hapticplugin.js" name="hapticPlugin">
