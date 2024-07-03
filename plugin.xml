@@ -17,7 +17,6 @@
         <clobbers target="cordova.plugins.hapticPlugin" />
     </js-module>
     <platform name="android">
-        <preference name="android-minSdkVersion" value="34" />
         <source-file src="src/android/HapticPlugin.java" target-dir="src/com/wrobins/cordova/plugin" />
     </platform>
     <platform name="ios">
